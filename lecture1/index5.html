@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        height: 100vh;
+        width: 100vw;
+        background-color: rgb(36, 35, 35);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-family: sans-serif;
+      }
+      h1 {
+        margin: 4rem 0;
+      }
+      button {
+        padding: 14px 80px;
+        background-color: #121212;
+        color: white;
+        cursor: pointer;
+        border-radius: 20px;
+        margin-top: 4rem;
+      }
+
+      button:hover {
+        background-color: seagreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Hii I love u</h1>
+      <h2 id="demo"></h2>
+      <p id="test"></p>
+      <button id="btn">Click me</button>
+      <button onclick="myFunc()" id="r">remove</button>
+    </div>
+
+    <script>
+      const btnn = document.getElementById("btn");
+      btnn.addEventListener("mouseover", jyoti);
+      btnn.addEventListener("click", shubham);
+
+      function jyoti() {
+        document.getElementById("demo").innerHTML = new Date();
+      }
+
+      function shubham() {
+        document.getElementById("test").innerHTML = "I love u ";
+      }
+
+      function myFunc() {
+        btnn.removeEventListener("mouseover", jyoti);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        height: 100vh;
+        width: 100vw;
+        background-color: darksalmon;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-family: sans-serif;
+      }
+
+      .box {
+        height: 400px;
+        width: 400px;
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box" onmouseover="mOver(this)" onmouseout="mOut(this)"></div>
+    </div>
+
+    <script>
+      function mOver(id) {
+        id.innerHTML = "U have hover on me";
+      }
+      function mOut(id) {
+        id.innerHTML = "How are u doing this?";
+      }
+    </script>
+  </body>
+</html>
